@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoardGame</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="input-container">
+        <div class="board-input">
+            <label for="numberOfSteps">Liczba kroków:</label>
+            <input name="numberOfSteps" id="numberOfSteps" type="number" min="1" max="10" value="5" width="30" />
+        </div>
+        <div class="board-input">
+            <input type="checkbox" id="toggleSplit" name="toggleSplit" checked/>
+            <label for="toggleSplit">Pokaż odstępy</label>
+        </div>
+    </div>
+    <p id="currentText" class="current-text"></p>
+    <div class="board-container">
+        <div>
+            <p id="currentGameStep" class="current-step"></p>
+            <div id="masterBoard" class="board-square"></div>
+        </div>
+
+        <div>
+            <p id="currentUserStep" class="current-step"></p>
+            <div id="gameBoard" class="board-square"></div>
+        </div>
+        
+    </div>
+    <div class="btn-container">
+        <button id="startGameBtn" type="button" class="board-btn">Start</button>
+        <button id="resetGameBtn" type="button" class="board-btn">Reset</button>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
